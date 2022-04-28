@@ -1,11 +1,11 @@
 import SocialCardItem from './SocialCardItem';
 
 function SocialCardsList (items) {
-    console.log("Items", items)
+    console.log("Items", items.items.items)
     return (
         <div>
              <h2>TESTING Outside of .map</h2>
-                {Object.values(items).map((item) => {
+                {items.items.items.map((item) => {
                     <ul>
                         <h2>TESTING INside of .map</h2>
                         <SocialCardItem 
