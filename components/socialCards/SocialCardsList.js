@@ -1,21 +1,26 @@
 import SocialCardItem from './SocialCardItem';
+import classes from './SocialCardsList.module.css';
 
 function SocialCardsList (items) {
     console.log("Items", items.items.items)
     return (
         <div>
              <h2>TESTING Outside of .map</h2>
+             <ul className={classes.container}>
                 {items.items.items.map((item) => (
-                    <ul key={item.item_id} >
-                        <h2>TESTING INside of .map</h2>
                         <SocialCardItem 
-                            
+                            key={item.item_id} 
                             id={item.item_id} 
-                            name={item.item_name}
+                            title={item.item_name}
+                            name={item.account_name}
+                            image={item.item_data.image_url}
+                            link={item.item_data.link}
+                            linkText={item.item_data.link_text}
+                            text={item.item_data.text}
                         />   
-                    </ul>
                                 
-    ))}                
+                    ))}         
+            </ul>       
         </div>
     )
 }
