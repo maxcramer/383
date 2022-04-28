@@ -1,5 +1,5 @@
 function SocialCardItem (item) {
-    console.log("SocialCardItem: ", SocialCardItem);
+    console.log("item in SocialCard: ", item);
     return (
         <li style={"border: 1px solid red"}>
             <div>
