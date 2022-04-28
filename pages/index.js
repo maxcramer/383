@@ -11,9 +11,10 @@ export async function getServerSideProps() {
   return {
     props: {
       data
-      //  {
-      //   name: data.account_name,
-      //   id: data.item_id,
+      // : {
+      //   id: data.item_id.toString(),
+      //   // image: data.item_data.image_url,
+      //   // desc: data.item_data.text
       // }
     }
   }

@@ -1,4 +1,4 @@
-function SocialCardItem (item) {
+function SocialCardItem (props) {
     return (
         <li>
             <div>
