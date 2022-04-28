@@ -4,9 +4,9 @@ const nextConfig = {
 }
 
 module.exports = {
-  Images: {
-    domains: ['http://aff-stream-bullring.383apps.co.uk']
-  }
+  images: {
+    domains: ['aff-stream-bullring.383apps.co.uk', 'instagram.com'],
+  },
 }
 
 module.exports = nextConfig
