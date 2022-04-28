@@ -7,14 +7,13 @@ const defaultEndpoint = 'http://private-cc77e-aff.apiary-mock.com/posts';
 export async function getServerSideProps() {
   const res = await fetch(defaultEndpoint);
   const data = await res.json();
-  console.log("This is the data", data)
+  // const dataArray = data.toArray();
   return {
     props: {
       data
-      // : {
+      // {
       //   id: data.item_id.toString(),
-      //   // image: data.item_data.image_url,
-      //   // desc: data.item_data.text
+      //   name: data.item_name
       // }
     }
   }

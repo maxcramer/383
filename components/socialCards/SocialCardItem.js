@@ -1,8 +1,9 @@
-function SocialCardItem (props) {
+function SocialCardItem (item) {
+    console.log("SocialCardItem: ", SocialCardItem);
     return (
-        <li>
+        <li style={"border: 1px solid red"}>
             <div>
-                {item.account_name}
+                <h2>TESTING</h2>
             </div>
         </li>
     )
