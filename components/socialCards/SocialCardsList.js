@@ -1,12 +1,14 @@
-import SocialCard from './SocialCard';
+import SocialCardItem from './SocialCardItem';
 
-function SocialCardsList (props) {
+function SocialCardsList (items) {
+    console.log("Items", items)
     return (
         <div>
             <ul>
-                {props.socialCards.map((socialCard) => {
-                    <SocialCard 
-                        name={socialCard.name}
+                {items.map((item) => {
+                    <SocialCardItem 
+                        key={item.item_id}
+                        name={item.account_name}
                     />
                 })}
                 

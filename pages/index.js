@@ -9,15 +9,16 @@ export async function getServerSideProps() {
   const data = await res.json();
   return {
     props: {
-      data
+      data: {
+        account_name: data.account_name,
+        id: data.item_id,
+      }
     }
   }
 }
 
-export default function Home({ data }) {
-  console.log(data)
+export default function Home({ props }) {
   return (
-    // <SocialCardsList  socialCards={ name='pete' }/>
-    <CardsPage />
+    <SocialCardsList items={props} />
   )
 }
