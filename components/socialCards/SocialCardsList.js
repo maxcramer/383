@@ -27,7 +27,7 @@ function SocialCardsList (items) {
     const manualArray = itemsArray.filter(items => items.service_name === 'Manual');
     console.log("manual Array: ", manualArray);
 
-    const [showing, setShowing] =  useState([]);
+    const [showing, setShowing] =  useState(itemsArray);
 
 
     // itemsArray.filter(service_name === 'Twiter');
@@ -45,6 +45,7 @@ function SocialCardsList (items) {
              <button onClick={()=>setShowing(instaArray)}>Instagram</button>             
              <button onClick={()=>setShowing(manualArray)}>Manual</button>
              <button onClick={()=>setShowing(twitterArray)}>Twitter</button>
+             <button onClick={()=>setShowing(itemsArray)}>Show All</button>
 
              <ul className={classes.container}>
                 {showing && showing.map((item) => (
