@@ -6,6 +6,7 @@ function SocialCardsList (items) {
     // if slug == twitter {return twitter social card}
     // if slug == instagram {return instagram social card}
     // if slug == manual {return manual social card}
+    // define by service_name, NOT slug!!
     return (
         <div>
              <h2>TESTING Outside of .map</h2>
@@ -14,17 +15,24 @@ function SocialCardsList (items) {
                         <SocialCardItem 
                             key={item.item_id} 
                             id={item.item_id} 
-                            title={item.item_name}
-                            name={item.account_name}
-                            image={item.item_data.image}
-                            imageIG={item.item_data.image}
-                            link={item.item_data.link}
-                            linkText={item.item_data.link_text}
-                            text={item.item_data.text}
-                            username={item.account_data.user_name}
-                            tweet={item.item_data.tweet}
                             serviceSlug={item.service_slug}
 
+                            // MAIN IMAGE 
+                            image={item.item_data.image}
+
+                            // LINKS 
+                            link={item.item_data.link}
+                            linkText={item.item_data.link_text}
+
+                            // MANUAL 
+                            text={item.item_data.text}
+
+                            // TWITTER
+                            twitterUsername={item.account_data.user_name}
+                            tweet={item.item_data.tweet}
+
+                            // INSTAGRAM
+                            igCaption={item.item_data.caption}
 
                         />   
                                 
