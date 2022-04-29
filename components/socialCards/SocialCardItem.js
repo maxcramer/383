@@ -3,7 +3,7 @@
 import classes from './SocialCardItem.module.css';
 
 function SocialCardItem (item) {
-    console.log("item in SocialCard: ", item);
+    // console.log("item in SocialCard: ", item);
 
     // var twitterUsername = item.twitterUsername.split(' ');
 

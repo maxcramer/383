@@ -1,17 +1,39 @@
+import { useState } from 'react';
 import SocialCardItem from './SocialCardItem';
 import classes from './SocialCardsList.module.css';
 
 function SocialCardsList (items) {
     console.log("Items", items.items.items)
+    const itemsArray = items.items.items;
+    console.log("itemsArray: ", itemsArray);
+    // function twitterArray (newTwitterArray) {
+    //     itemsArray.filter()
+    // }
+    const twitterArray = itemsArray.filter(function(item) {
+        return item.service_name === 'Twitter'
+    })
+
+    console.log(twitterArray);
+
+
+    // itemsArray.filter(service_name === 'Twiter');
     // if slug == twitter {return twitter social card}
     // if slug == instagram {return instagram social card}
     // if slug == manual {return manual social card}
     // define by service_name, NOT slug!!
+
+    // function twitterArray (itemsArray) {
+    //     console.log("Array:", itemsArray ); // this console logs the click info and location, why?!
+
+    // }
     return (
         <div>
-             <h2>TESTING Outside of .map</h2>
+             <button>Instagram</button>             
+             <button>Manual</button>
+             <button>Twitter</button>
+
              <ul className={classes.container}>
-                {items.items.items.map((item) => (
+                {itemsArray.map((item) => (
                         <SocialCardItem 
                             key={item.item_id} 
                             id={item.item_id} 
