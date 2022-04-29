@@ -9,11 +9,18 @@ function SocialCardsList (items) {
     // function twitterArray (newTwitterArray) {
     //     itemsArray.filter()
     // }
-    const twitterArray = itemsArray.filter(function(item) {
-        return item.service_name === 'Twitter'
-    })
+    // const twitterArray = itemsArray.filter(function(item) {
+    //     return item.service_name === 'Twitter'
+    // })
 
-    console.log(twitterArray);
+    // console.log(twitterArray);
+
+    const twitterArray = itemsArray.filter(items => items.service_name === 'Twitter');
+    console.log("Twitter Array: ", twitterArray);
+    const instaArray = itemsArray.filter(items => items.service_name === 'Instagram');
+    console.log("insta Array: ", instaArray);
+    const manualArray = itemsArray.filter(items => items.service_name === 'Manual');
+    console.log("manual Array: ", manualArray);
 
 
     // itemsArray.filter(service_name === 'Twiter');
@@ -33,7 +40,7 @@ function SocialCardsList (items) {
              <button>Twitter</button>
 
              <ul className={classes.container}>
-                {itemsArray.map((item) => (
+                {twitterArray.map((item) => (
                         <SocialCardItem 
                             key={item.item_id} 
                             id={item.item_id} 
