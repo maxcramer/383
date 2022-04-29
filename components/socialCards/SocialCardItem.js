@@ -13,17 +13,17 @@ function SocialCardItem (item) {
 
 
         console.log("Item inside hasImage: ", item)
-        if(item.serviceSlug === "Twitter") {
-            img.src = null
-        } else {
-            item.image ? item.image : `https://logovectordl.com/wp-content/uploads/2020/12/bullring-and-grand-central-logo-vector.png`
-        }
+        // if(item.serviceSlug === "Twitter") {
+        //     img.src = null
+        // } else {
+        //     item.image ? item.image : `https://logovectordl.com/wp-content/uploads/2020/12/bullring-and-grand-central-logo-vector.png`
+        // }
     }
     return (
         <li className={classes.item}>
             <div>
                 <h2>{item.title}</h2>
-                <img className={item.serviceSlug === "twitter" ? classes.none : classes.image } src={item.serviceSlug === "twitter" ? '' : `https://images.unsplash.com/photo-1612151855475-877969f4a6cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGQlMjBpbWFnZXxlbnwwfHwwfHw%3D&w=1000&q=80`} />
+                <img className={item.serviceSlug === "twitter" ? classes.none : classes.image } src={item.serviceSlug === "twitter" ? '' : `https://logovectordl.com/wp-content/uploads/2020/12/bullring-and-grand-central-logo-vector.png`} />
                 <p>{item.name}</p>
                 <p>{item.link}</p>
                 <p>{item.linkText}</p>

@@ -3,6 +3,9 @@ import classes from './SocialCardsList.module.css';
 
 function SocialCardsList (items) {
     console.log("Items", items.items.items)
+    // if slug == twitter {return twitter social card}
+    // if slug == instagram {return instagram social card}
+    // if slug == manual {return manual social card}
     return (
         <div>
              <h2>TESTING Outside of .map</h2>
