@@ -1,4 +1,5 @@
-import Image from "next/image";
+// import Image from "next/image";
+// import Link from "next/link";
 import classes from './SocialCardItem.module.css';
 
 function SocialCardItem (item) {
@@ -40,8 +41,9 @@ function SocialCardItem (item) {
                 <p>{item.tweet}</p>
 
                 {/* LINK */}
-                <p>{item.linkText}</p>
-                <p>{item.link}</p>
+                <a href={item.link} target="_blank">{item.linkText}</a>
+                {/* <p></p> */}
+                {/* <p>{item.link}</p> */}
 
                 {/* FOR DEVELOPMENT */}
                 <p>{item.id}</p>
