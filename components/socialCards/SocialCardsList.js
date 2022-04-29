@@ -15,7 +15,7 @@ function SocialCardsList (items) {
                         <SocialCardItem 
                             key={item.item_id} 
                             id={item.item_id} 
-                            serviceSlug={item.service_slug}
+                            serviceName={item.service_name}
 
                             // MAIN IMAGE 
                             image={item?.item_data?.image}

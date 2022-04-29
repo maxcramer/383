@@ -28,13 +28,13 @@ function SocialCardItem (item) {
         <li className={classes.item}>
             <div>
                 {/* MAIN IMAGE */}
-                <img className={item.serviceSlug === "twitter" ? classes.none : classes.image } src={item.serviceSlug === item.image ? '' : `https://logovectordl.com/wp-content/uploads/2020/12/bullring-and-grand-central-logo-vector.png`} />
+                <img className={item.serviceName === "Twitter" ? classes.none : classes.image } src={item.serviceName === item.image ? '' : `https://logovectordl.com/wp-content/uploads/2020/12/bullring-and-grand-central-logo-vector.png`} />
                 
                 {/* MANUAL */}
                 <p className={classes.manualText}>{item.text}</p>
                
                 {/* TWITTER */}
-                <p className={item.serviceSlug === 'twitter' ? classes.twitterUsername : classes.instaUsername}>{item.twitterUsername}</p>
+                <p className={item.serviceName === 'Twitter' ? classes.twitterUsername : classes.instaUsername}>{item.twitterUsername}</p>
                 <p className={classes.twitterText}>{item.tweet}</p>
 
                 {/* INSTAGRAM */}
