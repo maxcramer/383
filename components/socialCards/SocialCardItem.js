@@ -28,25 +28,23 @@ function SocialCardItem (item) {
         <li className={classes.item}>
             <div>
                 {/* MAIN IMAGE */}
-                <img className={item.serviceSlug === "twitter" ? classes.none : classes.image } src={item.serviceSlug === "twitter" ? '' : `https://logovectordl.com/wp-content/uploads/2020/12/bullring-and-grand-central-logo-vector.png`} />
+                <img className={item.serviceSlug === "twitter" ? classes.none : classes.image } src={item.serviceSlug === item.image ? '' : `https://logovectordl.com/wp-content/uploads/2020/12/bullring-and-grand-central-logo-vector.png`} />
                 
                 {/* MANUAL */}
-                <p>{item.text}</p>
+                <p className={classes.manualText}>{item.text}</p>
                
-                {/* INSTAGRAM */}
-                <p>{item.igCaption}</p>
-
                 {/* TWITTER */}
-                <p>{item.twitterUsername}</p>
-                <p>{item.tweet}</p>
+                <p className={item.serviceSlug === 'twitter' ? classes.twitterUsername : classes.instaUsername}>{item.twitterUsername}</p>
+                <p className={classes.twitterText}>{item.tweet}</p>
+
+                {/* INSTAGRAM */}
+                <p className={classes.instaText}>{item.igCaption}</p>
 
                 {/* LINK */}
-                <a href={item.link} target="_blank">{item.linkText}</a>
-                {/* <p></p> */}
-                {/* <p>{item.link}</p> */}
+                <a href={item.link} className={classes.link} target="_blank">{item.linkText}</a>
 
                 {/* FOR DEVELOPMENT */}
-                <p>{item.id}</p>
+                {/* <p>{item.id}</p> */}
             </div>
         </li>
     )

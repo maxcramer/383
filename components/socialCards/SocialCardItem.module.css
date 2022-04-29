@@ -18,8 +18,53 @@
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
   }
+
+  .manualText {
+    font-size: 32px;
+    font-family: sans-serif;
+    color: grey;
+    font-weight: 300;
+  }
+
+  .link {
+    font-size: 34px;
+    color: red;
+    font-family: sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+  }
+
+  .twitterUsername {
+    font-family: arial;
+    color: #6B6B6B;
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  .twitterText {
+    font-size: 40px;
+    text-align: center;
+    margin: 0 30px;
+    color: grey;
+  }
+
+  .instaUsername {
+      text-align: left;
+      color: grey;
+      font-size: 20px;
+      font-weight: 800;
+  }
+
+  .instaText {
+    font-size: 31px;
+    margin: 10px;
+    color: grey;
+    font-weight: 400;
+  }
   
-  .image img {
+  /* .image img {
     width: 100%;
     object-fit: cover;
   }
@@ -52,4 +97,4 @@
   .actions button:hover,
   .actions button:active {
     background-color: #ffe2ed;
-  }
+  } */

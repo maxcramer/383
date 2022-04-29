@@ -18,7 +18,7 @@ function SocialCardsList (items) {
                             serviceSlug={item.service_slug}
 
                             // MAIN IMAGE 
-                            image={item.item_data.image}
+                            image={item?.item_data?.image}
 
                             // LINKS 
                             link={item.item_data.link}
@@ -28,7 +28,8 @@ function SocialCardsList (items) {
                             text={item.item_data.text}
 
                             // TWITTER
-                            twitterUsername={item.account_data.user_name}
+                            // twitterUsername={item.account_data.user_name}
+                            twitterUsername={item?.item_data?.user?.username}
                             tweet={item.item_data.tweet}
 
                             // INSTAGRAM
