@@ -1,6 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SocialCardItem from './SocialCardItem';
 import classes from './SocialCardsList.module.css';
+
+// MONDAY: USE SET STATE!!!
+// on load useEffect - set all to 'shownArray'
+// then on button click, set state to each tag!! 
+
 
 function SocialCardsList (items) {
     console.log("Items", items.items.items)
@@ -22,6 +27,8 @@ function SocialCardsList (items) {
     const manualArray = itemsArray.filter(items => items.service_name === 'Manual');
     console.log("manual Array: ", manualArray);
 
+    const [showing, setShowing] =  useState([]);
+
 
     // itemsArray.filter(service_name === 'Twiter');
     // if slug == twitter {return twitter social card}
@@ -35,12 +42,12 @@ function SocialCardsList (items) {
     // }
     return (
         <div>
-             <button>Instagram</button>             
-             <button>Manual</button>
-             <button>Twitter</button>
+             <button onClick={()=>setShowing(instaArray)}>Instagram</button>             
+             <button onClick={()=>setShowing(manualArray)}>Manual</button>
+             <button onClick={()=>setShowing(twitterArray)}>Twitter</button>
 
              <ul className={classes.container}>
-                {twitterArray.map((item) => (
+                {showing && showing.map((item) => (
                         <SocialCardItem 
                             key={item.item_id} 
                             id={item.item_id} 
