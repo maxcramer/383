@@ -8,6 +8,7 @@ function SocialCardItem (item) {
         // new thought!!! 
         // COULD YOU have a different return and a different card returning depending
         // on which serviceSlug it has?! rather than trying to render all together!!
+        // or should i set up loads of ternerarry statements? could be alot longer and harder to manage...
 
 
 
@@ -15,7 +16,7 @@ function SocialCardItem (item) {
         if(item.serviceSlug === "Twitter") {
             img.src = null
         } else {
-            item.image ? item.image : `https://images.unsplash.com/photo-1612151855475-877969f4a6cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGQlMjBpbWFnZXxlbnwwfHwwfHw%3D&w=1000&q=80`
+            item.image ? item.image : `https://logovectordl.com/wp-content/uploads/2020/12/bullring-and-grand-central-logo-vector.png`
         }
     }
     return (
