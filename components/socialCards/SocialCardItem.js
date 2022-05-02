@@ -18,7 +18,7 @@ function SocialCardItem (item) {
                 <p className={classes.instaText}>{item.igCaption}</p>
 
                 {/* LINK */}
-                <a href={item.link} className={classes.link} target="_blank">{item.linkText}</a>
+                <a href={item.link} className={classes.link} target="_blank" rel="noreferrer">{item.linkText}</a>
 
             </div>
         </li>
