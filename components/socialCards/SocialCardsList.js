@@ -51,7 +51,7 @@ function SocialCardsList (items) {
                     ))}     
             </ul> 
             <div className={classes.button_container}>
-                <button onClick={newArray} className={classes.load_more}>Load More</button>      
+                <butto className={classes.load_more}>Load More</butto>      
             </div>
         </div>
     )
