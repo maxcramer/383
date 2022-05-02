@@ -1,11 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import SocialCardItem from './SocialCardItem';
 import classes from './SocialCardsList.module.css';
-
-// MONDAY: USE SET STATE!!!
-// on load useEffect - set all to 'shownArray'
-// then on button click, set state to each tag!! 
-
 
 function SocialCardsList (items) {
     const itemsArray = items.items.items;
@@ -20,11 +15,12 @@ function SocialCardsList (items) {
     
     return (
         <div>
-             <button className={classes.button} onClick={()=>setShowing(itemsArray)}>Show All</button>
-             <button className={classes.button} onClick={()=>setShowing(instaArray)}>Instagram</button>             
-             <button className={classes.button} onClick={()=>setShowing(manualArray)}>Manual</button>
-             <button className={classes.button} onClick={()=>setShowing(twitterArray)}>Twitter</button>
-
+            <div className={classes.button_container}>
+                <button className={classes.button} onClick={()=>setShowing(itemsArray)}>Show All</button>
+                <button className={classes.button} onClick={()=>setShowing(instaArray)}>Instagram</button>             
+                <button className={classes.button} onClick={()=>setShowing(manualArray)}>Manual</button>
+                <button className={classes.button} onClick={()=>setShowing(twitterArray)}>Twitter</button>
+            </div>
              <ul className={classes.container}>
                 {showing && showing.map((item) => (
                         <SocialCardItem 
@@ -54,8 +50,8 @@ function SocialCardsList (items) {
                                 
                     ))}     
             </ul> 
-            <div className={classes.load_more_container}>
-                <button className={classes.load_more}>Load More</button>      
+            <div className={classes.button_container}>
+                <button onClick={newArray} className={classes.load_more}>Load More</button>      
             </div>
         </div>
     )

@@ -47,7 +47,7 @@
     
 }
 
-.load_more_container {
+.button_container {
     display: flex;
     justify-content: center;
 }
