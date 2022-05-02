@@ -8,44 +8,22 @@ import classes from './SocialCardsList.module.css';
 
 
 function SocialCardsList (items) {
-    console.log("Items", items.items.items)
     const itemsArray = items.items.items;
-    console.log("itemsArray: ", itemsArray);
-    // function twitterArray (newTwitterArray) {
-    //     itemsArray.filter()
-    // }
-    // const twitterArray = itemsArray.filter(function(item) {
-    //     return item.service_name === 'Twitter'
-    // })
-
-    // console.log(twitterArray);
-
-    const twitterArray = itemsArray.filter(items => items.service_name === 'Twitter');
-    console.log("Twitter Array: ", twitterArray);
-    const instaArray = itemsArray.filter(items => items.service_name === 'Instagram');
-    console.log("insta Array: ", instaArray);
-    const manualArray = itemsArray.filter(items => items.service_name === 'Manual');
-    console.log("manual Array: ", manualArray);
 
     const [showing, setShowing] =  useState(itemsArray);
 
-
-    // itemsArray.filter(service_name === 'Twiter');
-    // if slug == twitter {return twitter social card}
-    // if slug == instagram {return instagram social card}
-    // if slug == manual {return manual social card}
-    // define by service_name, NOT slug!!
-
-    // function twitterArray (itemsArray) {
-    //     console.log("Array:", itemsArray ); // this console logs the click info and location, why?!
-
-    // }
+    console.log("itemsArray: ", itemsArray);
+ 
+    const twitterArray = itemsArray.filter(items => items.service_name === 'Twitter');
+    const instaArray = itemsArray.filter(items => items.service_name === 'Instagram');
+    const manualArray = itemsArray.filter(items => items.service_name === 'Manual');
+    
     return (
         <div>
-             <button onClick={()=>setShowing(instaArray)}>Instagram</button>             
-             <button onClick={()=>setShowing(manualArray)}>Manual</button>
-             <button onClick={()=>setShowing(twitterArray)}>Twitter</button>
-             <button onClick={()=>setShowing(itemsArray)}>Show All</button>
+             <button className={classes.button} onClick={()=>setShowing(itemsArray)}>Show All</button>
+             <button className={classes.button} onClick={()=>setShowing(instaArray)}>Instagram</button>             
+             <button className={classes.button} onClick={()=>setShowing(manualArray)}>Manual</button>
+             <button className={classes.button} onClick={()=>setShowing(twitterArray)}>Twitter</button>
 
              <ul className={classes.container}>
                 {showing && showing.map((item) => (
@@ -74,8 +52,11 @@ function SocialCardsList (items) {
 
                         />   
                                 
-                    ))}         
-            </ul>       
+                    ))}     
+            </ul> 
+            <div className={classes.load_more_container}>
+                <button className={classes.load_more}>Load More</button>      
+            </div>
         </div>
     )
 }

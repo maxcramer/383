@@ -6,3 +6,48 @@
     margin: 0 auto;
     justify-content: space-evenly;
 }
+
+.button {
+    border-bottom: 2px solid darkred;
+    border-left: 2px solid darkred;
+    border-top: 1px solid darkred;
+    border-right: 1px solid darkred;
+    background: transparent;
+    color: darkred;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 4px 15px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.button:active, .load_more:active {
+    background-color: lightgrey;
+    border-bottom: 1px solid darkred;
+    border-left: 1px solid darkred;
+    border-top: 2px solid darkred;
+    border-right: 2px solid darkred;
+    padding: 4px 15px;
+    margin: 15px;
+}
+
+.load_more {
+    width: 50%;
+    border-bottom: 2px solid darkred;
+    border-left: 2px solid darkred;
+    border-top: 1px solid darkred;
+    border-right: 1px solid darkred;
+    background: transparent;
+    color: darkred;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 4px 15px;
+    margin: 15px;
+    cursor: pointer;
+    
+}
+
+.load_more_container {
+    display: flex;
+    justify-content: center;
+}
